@@ -2,35 +2,39 @@
 <html>
 <head>
         <title>JavaJam Coffee House Jobs</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="javajam.css">
         <link rel = "icon" type="image/x-icon" href = "https://icons-for-free.com/iconfiles/png/512/Coffee-1320568040449299331.png">
 </head>
 
 <body>
-    <h1>JavaJam Coffee House</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="menu.html">Menu</a>
-        <a href="music.html">Music</a>
-        <a href="jobs.html">Jobs</a>
-    </nav>
+    <div id="wrapper">
+        <header>
+            <h1>JavaJam Coffee House</h1>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="menu.html">Menu</a>
+                    <a href="music.html">Music</a>
+                    <a href="jobs.html">Jobs</a>
+                </nav>
+        </header>
 
     <main>
         <h2>Jobs at JavaJam</h2>
         <p>Want to work at JavaJam? Fill out the form below to start your application. Required fields are marked with an asterisk (*).</p>
+        
         <form method="post", action=http://webdevbasics.net/scripts/javajam8.php>
-        <div>
+        
             <label>*Name:<br></label>
-            <input type="text" required>
-        </div>
-        <div>
+            <input type="text" required><br>
+
             <label><br>*Email:<br></label>
-            <input type="text" required>
-        </div>
-        <div>
+            <input type="text" required><br>
+       
             <label><br>*Experience:<br></label>
-            <textarea cols="40" rows="4" id="textarea"></textarea required>
-        </div>
-        <div>
+            <textarea cols="40" rows="4" id="textarea"></textarea required><br>
+        
             <label><br>Select Job Position:</label>
             <select id="job-position">
                 <option>Barista</option>
@@ -39,21 +43,23 @@
                 <option>Kitchen Staff</option>
                 <option>Cleaner</option>
                 <option>Cashier</option>
-            </select>
-        </div>
-        <div>
+            </select><br>
+       
             <label><br>Preferred Interview Date and Time:<br></label>
-            <input type="datetime-local">
-        </div>
-        <div>
+            <input type="datetime-local"><br>
+       
             <label><br>Upload your photo:</label>
-            <input type="file">
-        </div>
-        <br><button>Apply Now</button>
+            <input type="file"><br>
+       
+            <br><button>Apply Now</button><br>
         </form>
-        
-        <footer><i><small><p>Copyright &copy; 2021 JavaJam Coffee House
-            <br><a href="coffee@javajam.com">coffee@javajam.com</a></p></small></i></footer>
-            
+
     </main>
+        
+        <footer><p>Copyright &copy; 2021 JavaJam Coffee House
+            <br><a href="coffee@javajam.com">coffee@javajam.com</a></p></footer>
+            
+    </div>
 </body>
+
+</html>
