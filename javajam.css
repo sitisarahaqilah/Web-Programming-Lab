@@ -1,3 +1,6 @@
+* { box-sizing: border-box; }
+header, nav, main, footer { display: block; }
+
 body {
     background-color: #fcebb6;
     color: #221811;
@@ -27,6 +30,12 @@ nav {
     font-weight: bold;
     font-size: 1.5em;
     padding-top: 10px;
+    float: left;
+    width: 200px;
+}
+
+nav ul { list-style-type: none;
+    padding-left: 0;
 }
   
 nav a {
@@ -34,11 +43,9 @@ nav a {
     padding-bottom: 15px;
 }
   
-main {
-    padding-left: 2em;
-    padding-right: 2em;
-    padding-bottom: 2em;
-    display: block;
+main { padding: 0 0 2em 0;
+    margin-left: 200px;
+    background-color: #FEF6C2;
 }
   
 footer {
