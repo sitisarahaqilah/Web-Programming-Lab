@@ -55,15 +55,40 @@
         </div>
           
         <div class="mb-3">
-            <select class="form-select" aria-label="Default select example">
-                <option selected>Role</option>
-                <option value="1">Barista</option>
-                <option value="2">Supervisor</option>
-                <option value="3">Waiter</option>
-                <option value="4">Cleaner</option>
-                <option value="5">Kitchen Staff</option>
-                <option value="6">Cashier</option>
-            </select>
+            <label for="select-choice">Select job position:</label>
+            <script>
+                // 3(a)
+                var jobclass = [
+                    {code:"ba", name:"Barista", scope:"Preparing and serving hot and cold drinks such as coffee, tea, artisan and speciality beverages"},
+                    {code:"su", name:"Supervisor", scope:"Managing day-to-day operations of the cafe."},
+                    {code:"wa", name:"Waiter", scope:"Serving customers with a cheerful attitude."},
+                    {code:"cl", name:"Cleaner", scope:"Ensuring our cafe and coffee-making tools are in the best state."},
+                    {code:"ks", name:"Kitchen Staff", scope:"Preparing meals such as pastas and pastries."},
+                    {code:"ca", name:"Cashier", scope:"Taking orders and supporting daily operations of the cafe."}
+                ]; 
+            </script>
+                
+                <select class="form-control col-3" id="select-choice">");
+                    <script>// 3(b)
+                    for(var i = 0; i < jobclass.length; i++) {
+                        document.write("<option value=" + jobclass[i].code + ">" + jobclass[i].name + "</option>");
+                    }
+                    </script>
+                </select>
+
+                ​<script>
+                    //3(d)
+                    document.querySelector("#select-choice").addEventListener("change", function(){
+                        var item = document.querySelector("#select-choice").value;
+                        for (var i = 0; i < jobclass.length; i++){
+                            if(jobclass[i].code == item){
+                                document.querySelector("#jobscope").textContent = jobclass[i].scope; 
+                            }
+                        }
+                    })
+                </script>
+        <p id = "jobscope">Preparing and serving hot and cold drinks such as coffee, tea, artisan and speciality beverages.</p>
+
         </div>
         
         <label>Select Preferred Interview Date and Time:</label>
